@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+  <title>{% block title %}
+        {% endblock %}</title>
+</head>
+<body>
+  <table id="navbar">
+    <th><img class="img1" src="http://127.0.0.1:8000/media/shape-svg.jpg"></th>
+    <th><a href="#about2"><span>A</span>bout <span>U</span>s</a></th>
+    <th><a id="button1" href="add/">Добавить</a></th>
+  </table>
+  <ul class="bigimg">
+  <p id="about"><span>A</span>bout <span>U</span>s</p>
+  <p id="about2"><span>We</span> are the #1 <span>Shop</span> all of the <span>Nukus</span> and here <span>you</span> can find, more suitable <span>sneakers</span>
+    and <span>you</span> will <span>love</span> this shop</p>
+  <p id="snic"><span>S</span>neakers</p>
+  <div>
+      {% block content %}
+      {% endblock %}
+  </div>
+</body>
+</html>

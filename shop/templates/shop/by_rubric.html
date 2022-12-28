@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ current_rubric.name }} :: Доска обьявлений
+{% endblock title %}
+{% block content %}
+    <h2>Рубрика: {{ current_rubric.name }}</h2>
+    <div>
+        {% for shop in shops %}
+            <h2>{{ shop.title }}</h2>
+            <p>{{ shop.content }}</p>
+            <p>{{ shop.published|date:"d.m.Y H:i:s" }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}

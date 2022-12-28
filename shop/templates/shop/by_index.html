@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Shop of Shoes
+{% endblock %}
+
+{% block content %}
+        {% for shop in shops %}
+            <ul class="bigimg1" style="background: url({{shop.image1.url}});"></ul>
+            <ul class="bigimg2" style="background: url({{shop.image2.url}});"></ul>
+            <ul class="bigimg3" style="background: url({{shop.image3.url}});"></ul>
+            <div class="info">
+                <p class="info1"><span>К</span>омпания:{{shop.title}}</p>
+                <p class="info1"><span>М</span>одель:{{shop.content}}</p>
+                <p class="info1"><span>Ц</span>ена:{{shop.price}}$</p>
+            </div>
+        {% endfor %}
+        <div>
+            <div class="geo1">
+                <p><span>Г</span>ород: <span>Н</span>укус</p>
+                <p><span>E</span>mail: <span>Н</span>е имеется</p>
+                <p><span>Н</span>омер: <span>+998996821360</span></p>
+            </div>
+            <img class="geo" src="http://127.0.0.1:8000/media/Geo.jpg">
+    </div>
+{% endblock %}
